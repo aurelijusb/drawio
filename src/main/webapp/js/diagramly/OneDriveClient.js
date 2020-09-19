@@ -949,7 +949,6 @@ OneDriveClient.prototype.writeLargeFile = function(url, data, success, error, et
 						
 					req.setRequestHeaders = mxUtils.bind(this, function(request, params)
 					{
-						request.setRequestHeader('Content-Length', part.length);
 						request.setRequestHeader('Content-Range', 'bytes ' + index + '-' + (index + part.length - 1) + '/' + data.length);
 					});
 
